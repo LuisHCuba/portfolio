@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUIS CUBA | Data Analytics Portfolio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- Cabeçalho com navegação principal -->
+    <header>
+        <div class="container">
+            <h1>LUIS CUBA | DATA ANALYTICS</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>        
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de Contato -->
+    <main>
+        <section class="contact-section">
+            <h2>Entre em Contato</h2>
+            <p>Pronto para levar sua análise de dados para o próximo nível? Vamos conversar e ver como posso ajudar você a transformar dados em decisões estratégicas.</p>
+            <div class="contact-options">
+                <div class="contact-card">
+                    <a href="mailto:luishcuba@gmail.com" target="_blank">
+                        <h3>📧 E-mail</h3>
+                        <p>luishcuba@gmail.com</p>
+                    </a>
+                    <p>Envie-me um e-mail com detalhes do que você precisa e retornarei o mais rápido possível.</p>
+                </div>
+                <div class="contact-card">
+                    <a href="https://wa.me/5519981621022" target="_blank">
+                        <h3>📱 WhatsApp</h3>
+                        <p>+55 19 98162-1022</p>
+                    </a>
+                    <p>Entre em contato pelo WhatsApp para uma resposta rápida e dinâmica.</p>
+                </div>
+                <div class="contact-card">
+                    <a href="https://www.linkedin.com/in/luis-henrique-cuba/" target="_blank">
+                        <h3>🔗 LinkedIn</h3>
+                        <p>Luis Henrique Cuba</p>
+                    </a>
+                    <p>Conecte-se comigo no LinkedIn para trocar ideias e ver meu trabalho.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5519981621022" class="whatsapp-float" target="_blank" aria-label="Fale comigo pelo WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="WhatsApp">
+    </a>
+
+    <!-- Rodapé com navegação duplicada -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 por Luis Cuba | Data Analytics</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>    
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts para o efeito de partículas e o menu toggle -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+            menu.classList.toggle('show');
+        }
+
+        // Fechar o menu ao clicar fora dele
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('active');
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

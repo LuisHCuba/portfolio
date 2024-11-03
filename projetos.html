@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Meu Portfólio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- Cabeçalho com navegação principal -->
+    <header>
+        <div class="container">
+            <h1>LUIS CUBA | DATA ANALYTICS</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>        
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de Projetos -->
+    <main>
+        <section class="projects-section">
+            <h2>Meus Projetos</h2>
+            <p>Aqui estão alguns dos projetos em que trabalhei, usando ferramentas de análise de dados, visualização e automação. Cada projeto foi criado para resolver problemas reais e fornecer insights acionáveis para os clientes.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Imagem do Projeto 1">
+                    <h3>Projeto 1: Análise de Vendas</h3>
+                    <p>Uma análise completa das vendas de uma empresa, incluindo visualizações interativas e insights sobre o desempenho de diferentes produtos e regiões.</p>
+                    <a href="#" class="project-link">Ver Projeto</a>
+                </div>
+                
+                <div class="project-card">
+                    <img src="img/projeto2.png" alt="Imagem do Projeto 2">
+                    <h3>Projeto 2: Dashboard Financeiro</h3>
+                    <p>Desenvolvi um painel financeiro para monitorar métricas-chave de fluxo de caixa, permitindo melhor tomada de decisão e gerenciamento financeiro.</p>
+                    <a href="#" class="project-link">Ver Projeto</a>
+                </div>
+                
+                <!-- Adicione mais cartões de projetos conforme necessário -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com navegação duplicada -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Luis Cuba | Data Analytics</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>    
+            </ul>
+        </div>
+    </footer>
+    
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5519981621022" class="whatsapp-float" target="_blank" aria-label="Fale comigo pelo WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="WhatsApp">
+    </a>
+
+    <!-- Scripts para o menu toggle -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+            menu.classList.toggle('show');
+        }
+
+        // Fechar o menu ao clicar fora dele
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('active');
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
